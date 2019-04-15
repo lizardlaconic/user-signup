@@ -1,0 +1,39 @@
+<!--template.render(name="", name_error="", passphrase="", pass_error="", check="", verify_error="", address="", email_error="")-->
+<!DOCTYPE html>
+<html>
+    <style>
+        .error { color: red; }
+    </style>
+    <body>
+        <h1>Signup</h1>
+        <form action="/" method="POST">
+        <table>
+        <tbody>
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text" id="username" name="username" value='{{name}}' /></td>
+                <td><p class="error">{{name_error}}</p></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" value='{{passphrase}}' /></td>
+                <td><p class="error">{{pass_error}}</p></td>
+            </tr>
+            <tr>
+                <td><label for="verify">Verify Password:</label></td>
+                <td><input type="password" id="verify" name="verify" value="{{check}}" /></td>
+                <td><p class="error">{{verify_error}}</p></td>
+            </tr>
+            <tr>    
+                <td><label for="email">Email (optional):</label></td>
+                <td><input type="text" id="email" name="email" value="{{address}}" /></td>
+                <td><p class="error">{{email_error}}</p></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Validate"/></td>
+            </tr>
+        </tbody>
+        </table>
+        </form>
+    </body>
+</html>
